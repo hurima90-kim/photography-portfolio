@@ -1,7 +1,6 @@
 "use client";
 
 import { Masonry } from "react-plock";
-import { SanityDocument } from "next-sanity";
 
 interface MasonryItem {
   id: number;

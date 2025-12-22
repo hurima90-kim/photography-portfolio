@@ -1,6 +1,4 @@
 import MasonryGrid from "@/components/masonry";
-import { SanityDocument } from "next-sanity";
-import { client } from "../../sanity/lib/client";
 
 const items = [
   { height: 600, color: "#D32F2F", id: 1 }, // Extra Tall - Darker Red
@@ -26,19 +24,7 @@ const items = [
   { height: 300, color: "#E65100", id: 21 }, // Medium-Short - Darker Orange
 ];
 
-// const photoQuery = `*[_type == "photo"] | order(_createdAt desc) {
-//   _id,
-//   title,
-//   caption,
-//   tags,
-//   "imageUrl": image.asset->url // 이미지 URL 가져오기
-// }`;
-
-// const options = { next: { revalidate: 30 } };
-
 export default async function Home() {
-  // const items = await client.fetch<SanityDocument[]>(photoQuery, {}, options);
-
   return (
     <div className="mb-32">
       <h1 className="text-4xl font-bold mb-4">Portfolio</h1>
